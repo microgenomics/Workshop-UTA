@@ -1,6 +1,8 @@
-![banner](https://github.com/microgenomics/Workshop-PUC/blob/master/images/logocbibhorizontal.png?raw=true)
+![banner](https://github.com/microgenomics/Workshop-UTA/blob/master/images/logocbibhorizontal.png?raw=true)
 
 ### Microbial Genomics Lab
+
+[www.castrolab.org](http://www.castrolab.org)
 
 ---
 

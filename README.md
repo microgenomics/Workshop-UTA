@@ -1,8 +1,10 @@
-![banner](https://github.com/microgenomics/Workshop-PUC/blob/master/images/logocbibhorizontal.png?raw=true)
+![banner](https://github.com/microgenomics/Workshop-UTA/blob/master/images/logocbibhorizontal.png?raw=true)
 
 ## Microbial Genomics Lab
 
 [Eduardo Castro-Nallar](https://github.com/ecastron) - Jaime Alarcon
+
+[www.castrolab.org](http://www.castrolab.org)
 
 ---
 
@@ -40,4 +42,4 @@ Bienvenidos al repositorio del taller teórico-práctico de **Bioinformática Ge
 
 ---
 
-![bot](https://github.com/microgenomics/Workshop-PUC/blob/master/images/huincha.jpg?raw=true)
+![bot](https://github.com/microgenomics/Workshop-UTA/blob/master/images/huinchaunab.jpg?raw=true)
