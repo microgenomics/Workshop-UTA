@@ -20,7 +20,7 @@ Bienvenidos al repositorio del taller teórico-práctico de **Bioinformática Ge
 + **Práctica**:
 	+ Preparando el computador...
 		+ Introducción a la terminal, Bash, R/RStudio y Bioconductor.
-		+ Guía de commandos básicos.
+		+ [Guía de commandos básicos](https://github.com/microgenomics/Workshop-UTA/blob/master/Dia1/GuiaComandosBasicosTerminal.md).
  
 ### Día 2:
 
