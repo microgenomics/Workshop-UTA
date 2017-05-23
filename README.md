@@ -21,7 +21,6 @@ Bienvenidos al repositorio del taller teórico-práctico de **Bioinformática Ge
 
 + **Teoría**: 
 	+ Secuenciamiento masivo de DNA total y productos de PCR.
-	+ Taxonomic, functional profiling and metabarcoding.
 
 + **Práctica**:
 	+ Preparando el computador...
@@ -31,6 +30,7 @@ Bienvenidos al repositorio del taller teórico-práctico de **Bioinformática Ge
 ### Día 2:
 
 + **Teórico**:
+	+ Taxonomic, functional profiling and metabarcoding.
 	+ ¿Por qué el 16S rRNA? Ventajas, limitaciones y estrategias de análisis (¿Qué podemos responder?).
 
 + **Práctico**:
