@@ -87,11 +87,25 @@ Date cuenta que Mothur nos advirte que hay secuencias que no han podido ser clas
 ### 3. Asignación de Taxonomía
 En `Mothur`, la asignación de taxonomía puede hacerse usando el comando `classify.otu` que toma la lista OTUs y `count_table` (para mantener un registro de los recuentos de reads en cada OTU) y busca los resultados que obtuvimos de `classify.seqs` para asignar OTUs a taxones.	mothur > classify.otu(list=stability.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.an.unique_list.list, count=stability.trim.contigs.good.unique.good.filter.unique.precluster.uchime.pick.pick.count_table, taxonomy=stability.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.taxonomy, label=0.03)Puedes ver los resultados de la asignación de taxonomía en `stability.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.an.unique_list.0.03.cons.taxonomy`. Vaya a la otra ventana de terminal y emita el siguiente comando:	less stability.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.an.unique_list.0.03.cons.taxonomy	OTU     Size    Taxonomy
 ### 4. Construir la Tabla OTUEn `Mothur`, las tablas OTU están representadas por los archivos `.shared`. Podemos convertir archivos `.shared` a tablas OTU compatibles con QIIME en formato BIOM con la siguiente línea de comando:	mothur > make.biom(shared=stability.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.an.unique_list.shared, constaxonomy=stability.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.an.unique_list.0.02.cons.taxonomy)
-	
 	get.oturep(column=stability.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.dist,list=stability.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.an.unique_list.list,fasta=stability.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.fasta,name=stability.trim.contigs.good.names,label=0.03)
 	
-***Aqui VA el archivo LISTO*** 
+**Nota**: El archivo de salida que obtenemos en éste paso, aún no está listo... si lo abren para darle un vistazo, deberían ver algo como en la siguiente imágen (fíjense en los IDs **>**):
+
+![prefile](https://github.com/microgenomics/Workshop-UTA/blob/master/images/prefile.png?raw=true)
+... los IDs, es decir, lo que está escrito después del caracter `>`, deben ser modificados para conservar solo la parte "Otu####". Deben verse así:
+
+![postfile](https://github.com/microgenomics/Workshop-UTA/blob/master/images/postfile.png?raw=true)
+... puedes descargar el archivo listo **[aquí](https://github.com/microgenomics/Workshop-UTA/raw/master/Dia2/stability.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.an.unique_list.0.03.rep.fasta.zip)**.
 
 ### 5. Alineamiento de SecuenciaEn `Mothur`, el alineamiento de secuencia se hace previo como parte del pre-procesamiento. Esto permitie a `Mothur` realizar *de novo* OTU *picking* en los datos de secuencias.
 
-### 6. Análisis FilogenéticoSi están interesado en usar métodos que dependen de un árbol filogenético como el cálculo de la diversidad filogenética o los comandos `unifrac`, tendrás que generar un árbol. En `Mothur`, `clearcut` se utiliza para generar un árbol filogenético de las OTUs.	mothur > dist.seqs(fasta=stability.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.fasta, output=lt, processors=8)	mothur > clearcut(phylip=stability.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.phylip.dist)Esto genera un archivo `.tre` = `stability.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.phylip.tre`. Puedes abrir el archivo `.tre` usando el programa `FigTree`.![FigTree](https://github.com/microgenomics/Workshop-UTA/blob/master/images/figtree.png?raw=true)
+### 6. Análisis FilogenéticoSi están interesado en usar métodos que dependen de un árbol filogenético como el cálculo de la diversidad filogenética o los comandos `unifrac`, tendrás que generar un árbol. En `Mothur`, `clearcut` se utiliza para generar un árbol filogenético de las OTUs.	mothur > dist.seqs(fasta=stability.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.fasta, output=lt, processors=8)	mothur > clearcut(phylip=stability.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.phylip.dist)Esto genera un archivo `.tre` = `stability.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.phylip.tre`. ... puedes descargar el archivo `.phylip.tree` **[aquí](https://github.com/microgenomics/Workshop-UTA/raw/master/Dia2/stability.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.an.unique_list.0.03.rep.phylip.tre.zip)**.Puedes abrir el archivo `.tre` usando el programa `FigTree`.![FigTree](https://github.com/microgenomics/Workshop-UTA/blob/master/images/figtree.png?raw=true)Podrías ver algo como esto...
+
+![tree2](https://github.com/microgenomics/Workshop-UTA/blob/master/images/tree2.png?raw=true)
+O algo como esto...
+
+![tree1](https://github.com/microgenomics/Workshop-UTA/blob/master/images/tree1.png?raw=true3)
+
+---
+
+![bot](https://github.com/microgenomics/Workshop-UTA/blob/master/images/huinchaunab.jpg?raw=true)
