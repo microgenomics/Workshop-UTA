@@ -12,8 +12,6 @@
 
 # Introducción a la terminal, Bash, R/RStudio y Bioconductor
 
----
-
 ## Introducción a la Terminal
 
 Hola! Bienvenidos al primer práctico de uso de la terminal y R, aquí aprenderás los comandos esenciales usados en la **terminal**, también conocida como **consola** o **shell**, que son la base en el manejo de cualquier proyecto que tenga bioinformática en él. Así que... manos a la obra!!
