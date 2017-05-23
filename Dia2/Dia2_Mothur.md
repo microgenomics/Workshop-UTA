@@ -4,7 +4,7 @@
 
 ## Microbial Genomics Lab
 
-[Eduardo Castro-Nallar](https://github.com/ecastron) - [Jaime Alarcon](https://github.com/jaimealarcon)
+[Eduardo Castro-Nallar](https://github.com/ecastron) - [Jaime Alarcon](https://github.com/jaimealarcon) - Ignacio Ramos
 
 [http://www.unab.cl](http://www.unab.cl) - [http://www.cbib.cl](http://www.cbib.cl) - [www.castrolab.org](http://www.castrolab.org) - [http://www.ucdavischile.org](http://www.ucdavischile.org)
 
@@ -41,16 +41,15 @@ Luego de acceder a nuestro directorio `workshop_mothur`, copiaremos los archivos
 
 La terminal deberia mostrar algo asi:
 
-![archivos_de_salida](FOTO MOTHUR 1)
-
+![mothur1](https://github.com/microgenomics/Workshop-UTA/blob/master/images/mothur1.png?raw=true)
 `Mothur` siempre dará una lista de los archivos que generó - una característica bastante útil. Hay que tener en cuenta que todas las *reads* están ahora en un sólo archivo FASTA llamado `stability.trim.contigs.fasta`. La información que enlaza *reads* a las muestras esta en `stability.contigs.groups`. Podemos echar un vistazo a los resultados del ensamblaje.
 Los arhivos que genera mothur son los siguientes:
 
-![Archivos de salida mothur](FOTO MOTHUR 2)
+![mothur2](https://github.com/microgenomics/Workshop-UTA/blob/master/images/mothur2.png?raw=true)
 
 	summary.seqs(fasta=stability.trim.contigs.fasta)
 
-![pantalla1]( FOTO MOTHUR 3)Este comando que veremos una y otra vez resume el contenido de un archivo FASTA. Poner atención al total de secuencias ensambladas con éxito. También podemos notar que la mayoría de las *reads* están dentro del tamaño esperado (~250bps), pero algunas *reads* son demasiado largas. 
+![mothur3](https://github.com/microgenomics/Workshop-UTA/blob/master/images/mothur3.png?raw=true)Este comando que veremos una y otra vez resume el contenido de un archivo FASTA. Poner atención al total de secuencias ensambladas con éxito. También podemos notar que la mayoría de las *reads* están dentro del tamaño esperado (~250bps), pero algunas *reads* son demasiado largas. 
 
 	screen.seqs(fasta=stability.trim.contigs.fasta, group=stability.contigs.groups, maxambig=0, minlength=100, maxlength=300)
 	
@@ -58,7 +57,7 @@ Los arhivos que genera mothur son los siguientes:
 
 	summary.seqs(fasta=stability.trim.contigs.good.fasta)
 	
-**Notar cuantas secuencias tenemos ahora, que pasaron el filtro.**![pantalla2](FOTO MOTHUR 4)
+**Notar cuantas secuencias tenemos ahora, que pasaron el filtro.**![mothur4](https://github.com/microgenomics/Workshop-UTA/blob/master/images/mothur4.png?raw=true)
 
 #### Reducir el número de secuencias redundantesEn sus muestras, habrá secuencias que son idénticas. Podemos emitir los siguientes comandos para combinar secuencias duplicadas en una y mantener un registro del número de copias de cada una de las secuencias duplicadas.	unique.seqs(fasta=stability.trim.contigs.good.fasta)	count.seqs(name=stability.trim.contigs.good.names, group=stability.contigs.good.groups)Esto generará `stability.trim.contigs.good.unique.fasta` que contiene sólo una copia de cada una de las *reads* duplicadas. Podemos ver cuantas secuencias únicas hay. El archivo `stability.trim.contigs.good.names` mantiene un registro de las secuencias que se duplican. El comando `count.seqs` genera un archivo `count_table` - `stability.trim.contigs.good.count_table` que sólo mantiene un registro del número de copias de cada una de las secuencias duplicadas. En general, el archivo `.names` le da la membresía de cada grupo de secuencias.
 
@@ -66,7 +65,7 @@ Los arhivos que genera mothur son los siguientes:
 
 	mothur > summary.seqs(fasta=stability.trim.contigs.good.unique.align, count=stability.trim.contigs.good.count_table)
 	
-![pantalla2](FOTO MOTHUR 5)
+![mothur5](https://github.com/microgenomics/Workshop-UTA/blob/master/images/mothur5.png?raw=true)
 
 Vemos que nuestras secuencias se alinean con la region V4 entre las regiones 1968 y 11550 y es ahi donde haremos el corte.
 
@@ -76,9 +75,9 @@ Podemos ver la región en que la mayoría de las secuencias se alinean. Eliminar
 
 Luego de ver el resumen de las secuencias que estan alineando con la base de datos veras algo asi.
 
-![pantalla2](FOTO MOTHUR 6)	mothur > filter.seqs(fasta=stability.trim.contigs.good.unique.good.align, vertical=T, trump=.)Los resultados del alineamiento y filtro son:![pantalla2](FOTO MOTHUR 7)Después de alinear y recortar, algunas de las *reads* ahora pueden estar duplicadas, así que ejecutaremos el comando `unique.seqs` de nuevo.	mothur > unique.seqs(fasta=stability.trim.contigs.good.unique.good.filter.fasta, count=stability.trim.contigs.good.good.count_table)Ahora tenemos secuencias alineadas en `stability.trim.contigs.good.unique.good.filter.unique.fasta` y las secuencias duplicadas son rastreadas en `stability.trim.contigs.good.unique.good.filter.count_table`.Utilizaremos el comando `pre.cluster` para eliminar aún más las secuencias raras que son muy similares a las secuencias abundantes (dentro de las diferencias de 2nt). Es probable que estas secuencias raras se deban a errores de secuenciación.	mothur > pre.cluster(fasta=stability.trim.contigs.good.unique.good.filter.unique.fasta, count=stability.trim.contigs.good.unique.good.filter.count_table, diffs=2)#### Eliminar las secuencias quiméricas y no 16SA continuación utilizaremos **UCHIME** un software que incluye **Mothur** para eliminar las secuencias quiméricas.Ejecutamos el comando para eliminar quimera, invocando al packete UCHIME que tiene incorporado MOTHUR asi:	mothur > chimera.uchime(fasta=stability.trim.contigs.good.unique.good.filter.unique.precluster.fasta, count=stability.trim.contigs.good.unique.good.filter.unique.precluster.count_table, dereplicate=t)Utilizando el comando remove.seq, utilizamos el archivo que arroja UCHIME para eliminar esas secuencias quimericas.
+![mothur6](https://github.com/microgenomics/Workshop-UTA/blob/master/images/mothur6.png?raw=true)	mothur > filter.seqs(fasta=stability.trim.contigs.good.unique.good.align, vertical=T, trump=.)Los resultados del alineamiento y filtro son:![mothur7](https://github.com/microgenomics/Workshop-UTA/blob/master/images/mothur7.png?raw=true)Después de alinear y recortar, algunas de las *reads* ahora pueden estar duplicadas, así que ejecutaremos el comando `unique.seqs` de nuevo.	mothur > unique.seqs(fasta=stability.trim.contigs.good.unique.good.filter.fasta, count=stability.trim.contigs.good.good.count_table)Ahora tenemos secuencias alineadas en `stability.trim.contigs.good.unique.good.filter.unique.fasta` y las secuencias duplicadas son rastreadas en `stability.trim.contigs.good.unique.good.filter.count_table`.Utilizaremos el comando `pre.cluster` para eliminar aún más las secuencias raras que son muy similares a las secuencias abundantes (dentro de las diferencias de 2nt). Es probable que estas secuencias raras se deban a errores de secuenciación.	mothur > pre.cluster(fasta=stability.trim.contigs.good.unique.good.filter.unique.fasta, count=stability.trim.contigs.good.unique.good.filter.count_table, diffs=2)#### Eliminar las secuencias quiméricas y no 16SA continuación utilizaremos **UCHIME** un software que incluye **Mothur** para eliminar las secuencias quiméricas.Ejecutamos el comando para eliminar quimera, invocando al packete UCHIME que tiene incorporado MOTHUR asi:	mothur > chimera.uchime(fasta=stability.trim.contigs.good.unique.good.filter.unique.precluster.fasta, count=stability.trim.contigs.good.unique.good.filter.unique.precluster.count_table, dereplicate=t)Utilizando el comando remove.seq, utilizamos el archivo que arroja UCHIME para eliminar esas secuencias quimericas.
 
-	mothur > remove.seqs(fasta=stability.trim.contigs.good.unique.good.filter.unique.precluster.fasta, accnos=stability.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.accnos)![pantalla2](FOTO MOTHUR 8)
+	mothur > remove.seqs(fasta=stability.trim.contigs.good.unique.good.filter.unique.precluster.fasta, accnos=stability.trim.contigs.good.unique.good.filter.unique.precluster.denovo.uchime.accnos)![mothur8](https://github.com/microgenomics/Workshop-UTA/blob/master/images/mothur8.png?raw=true)
 
 Observa que un porcentaje no menor fue eliminado por UCHIME, por lo tanto este paso es muy importante para el analisis, asi evitamos no clasificar secuencias que posiblemente jamas existieron (Falsos positivos)Usando el comando `classify.seqs`, Clasificaremos las secuencias de nuestros datos. Tenga en cuenta que este paso requiere la base de datos RDP (`trainset9_032012.pds.fasta` y el archivo de taxonomía) como referencia.	mothur > classify.seqs(fasta=stability.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, count=stability.trim.contigs.good.unique.good.filter.unique.precluster.uchime.pick.count_table, reference=trainset9_032012.pds.fasta, taxonomy=trainset9_032012.pds.tax, cutoff=80)
 	
