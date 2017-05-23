@@ -34,7 +34,7 @@ Bienvenidos al repositorio del taller teórico-práctico de **Bioinformática Ge
 	+ ¿Por qué el 16S rRNA? Ventajas, limitaciones y estrategias de análisis (¿Qué podemos responder?).
 
 + **Práctico**:
-	+ Introducción a mothur, SILVA y GreenGenes.
+	+ [Introducción a mothur, SILVA y GreenGenes](https://github.com/microgenomics/Workshop-UTA/blob/master/Dia2/Dia2_Mothur.md).
 
 ### Día 3:
 
