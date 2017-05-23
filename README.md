@@ -1,10 +1,14 @@
-![banner](https://github.com/microgenomics/Workshop-UTA/blob/master/images/logocbibhorizontal.png?raw=true)
+![UNAB_CBIB](https://github.com/microgenomics/Workshop-UTA/blob/master/images/logocbibhorizontal.png?raw=true)
+
+<img src="https://github.com/microgenomics/Workshop-UTA/blob/master/images/UCDavisChile.jpg?raw=true" alt="alt text" width="430" height="60">
 
 ## Microbial Genomics Lab
 
-[Eduardo Castro-Nallar](https://github.com/ecastron) - Jaime Alarcon
+[Eduardo Castro-Nallar](https://github.com/ecastron) - [Jaime Alarcon](https://github.com/jaimealarcon)
 
-[www.castrolab.org](http://www.castrolab.org)
+[Sandro Valenzuela-Diaz](https://github.com/Sanrrone) - [Katterinne Mendez](https://github.com/Katterinne)
+
+[http://www.unab.cl](http://www.unab.cl) - [http://www.cbib.cl](http://www.cbib.cl) - [www.castrolab.org](http://www.castrolab.org) - [http://www.ucdavischile.org](http://www.ucdavischile.org)
 
 ---
 
