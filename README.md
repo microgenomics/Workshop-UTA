@@ -1,6 +1,6 @@
 ![UNAB_CBIB](https://github.com/microgenomics/Workshop-UTA/blob/master/images/logocbibhorizontal.png?raw=true)
 
-<img src="https://github.com/microgenomics/Workshop-UTA/blob/master/images/UCDavisChile.jpg?raw=true" alt="alt text" width="430" height="60">
+![UCDavisChile](https://github.com/microgenomics/Workshop-UTA/blob/master/images/UCDavisChile.jpg?raw=true)
 
 ## Microbial Genomics Lab
 
