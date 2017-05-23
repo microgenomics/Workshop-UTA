@@ -8,8 +8,6 @@
 
 [http://www.unab.cl](http://www.unab.cl) - [http://www.cbib.cl](http://www.cbib.cl) - [www.castrolab.org](http://www.castrolab.org) - [http://www.ucdavischile.org](http://www.ucdavischile.org)
 
----
-
 ###### Workshop_UTA - Día 1
 
 # Introducción a la terminal, Bash, R/RStudio y Bioconductor
