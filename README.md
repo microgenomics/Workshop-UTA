@@ -41,7 +41,8 @@ Bienvenidos al repositorio del taller teórico-práctico de **Bioinformática Ge
 	+ Diseño experimental, poder estadístico y análisis de datos.
 
 + **Práctico**:
-	+ Diversidad alfa y beta, métodos de distancia y escalamiento multidimensional, análisis de abundancia diferencial, y redes de co-ocurrencia. 
+	+ [Diversidad alfa y beta, métodos de distancia y escalamiento multidimensional, análisis de abundancia diferencial, y redes de co-ocurrencia](https://github.com/microgenomics/Workshop-UTA/blob/master/Dia3/Dia3_DivAbund.md).
+		+ [Análisis en Mothur](https://github.com/microgenomics/Workshop-UTA/blob/master/Dia3/Dia3_DivAbund_Mothur.md).
 
 ---
 
