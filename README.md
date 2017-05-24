@@ -20,7 +20,7 @@ Bienvenidos al repositorio del taller teórico-práctico de **Bioinformática Ge
 ### Día 1: 
 
 + **Teoría**: 
-	+ Secuenciamiento masivo de DNA total y productos de PCR.
+	+ [Tecnologías de secuenciación masiva](https://www.dropbox.com/s/75vrk3ia76pvrcg/d%C3%ADa01.pdf?dl=1)
 
 + **Práctica**:
 	+ Preparando el computador...
@@ -30,7 +30,7 @@ Bienvenidos al repositorio del taller teórico-práctico de **Bioinformática Ge
 ### Día 2:
 
 + **Teórico**:
-	+ 16S rRNA ventajas, limitaciones y análisis  
+	+ [16S rRNA ventajas, limitaciones y análisis](https://www.dropbox.com/s/13kq95vfm5ejd2b/d%C3%ADa02.pdf?dl=1)  
 
 + **Práctico**:
 	+ [Introducción a mothur, SILVA y GreenGenes](https://github.com/microgenomics/Workshop-UTA/blob/master/Dia2/Dia2_Mothur.md).
