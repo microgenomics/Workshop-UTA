@@ -38,7 +38,7 @@ Bienvenidos al repositorio del taller teórico-práctico de **Bioinformática Ge
 ### Día 3:
 
 + **Teórico**:
-	+ [Análisis de datos - diversidad, co-ocurrencia, abundancia diferencial]()
+	+ [Análisis de datos - diversidad, co-ocurrencia, abundancia diferencial](https://www.dropbox.com/s/nebzp31s7rn572d/d%C3%ADa03.pdf?dl=1)
 
 + **Práctico**:
 	+ [Diversidad alfa y beta, métodos de distancia y escalamiento multidimensional, análisis de abundancia diferencial, y redes de co-ocurrencia](https://github.com/microgenomics/Workshop-UTA/blob/master/Dia3/Dia3_DivAbund.md).
